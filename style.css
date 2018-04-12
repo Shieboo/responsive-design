@@ -1,0 +1,138 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.black-bar {
+  background: #000;
+  width: 100%;
+  height: 32px;
+}
+
+.main-nav {
+  background: #fff;
+  width: 100%;
+  height: 50px;
+}
+
+.announcement {
+  background: #ffdd47;
+  width: 100%;
+  height: 32px;
+}
+
+.container {
+  margin-top: 114px;
+  background: #fff;
+}
+
+.cover-container {
+  padding: 2px 8px 8px;
+  display: grid;
+  grid-template-columns: 67% 1fr;
+  grid-template-rows: repeat(2, minmax(100px, 250px));
+  grid-gap: 10px;
+  width: auto;
+  height: 550px;
+}
+
+#cover-article1 {
+  grid-area: 1 / 1 / 3 / 2;
+  background: url("assets/images/article1.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#cover-article2 {
+  grid-column: 2 / 3;
+  background: url("assets/images/article2.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#cover-article3 {
+  grid-column: 2 / 3;
+  background: url("assets/images/article3.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/*  START OF COVER MEDIA QUERIES */
+@media screen and (max-width: 902px) {
+  .cover-container {
+    height: auto;
+    grid-template-rows: repeat(2, minmax(100px, 150px));
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cover-container {
+    display: block;
+    height: auto;
+    margin-bottom: 32px;
+  }
+  .cover-article {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+/*  END OF COVER MEDIA QUERIES */
+
+
+.news-title {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  width: 250px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.news-container {
+  padding: 10px;
+  background: #fff;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 10px;
+}
+.news-article {
+  background: #ccc;
+  width: 100%;
+  height: 100%;
+}
+
+/*  START OF NEWS MEDIA QUERIES */
+@media screen and (max-width: 1023px) {
+  .news-container {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-container {
+    grid-template-columns: 100%;
+    height: auto;
+  }
+  .news-article {
+    height: 100px;
+  }
+}
+
+/*  END OF NEWS MEDIA QUERIES */
+
+.footer-container {
+  margin-top: 32px;
+  height: 250px;
+}
+.social-link {
+  background: #111;
+  height: 60%;
+}
+.copyright {
+  background: #000;
+  height: 40%;
+}
